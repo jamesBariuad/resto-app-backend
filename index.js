@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const PORT = process.env.PORT || 8080 ;
 const cors = require("cors");
 const forSaleItemsRouter = require("./routes/forSaleItems");
 const cartItemsRouter = require("./routes/cartItems");
@@ -17,6 +17,6 @@ app.get("/", (request, response) => {
   response.send(console.log("test"));
 });
 
-app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`listening on port ${PORT}`);
 });
