@@ -14,7 +14,7 @@ app.use("/forSaleItems", forSaleItemsRouter);
 app.use("/cartItems", cartItemsRouter);
 
 app.get("/", (request, response) => {
-  response.send(console.log("test"));
+  
   response.sendStatus(200);
 });
 
